@@ -1,0 +1,69 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+
+}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="~/css/loginreg.css">
+</head>
+<body>
+    <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+        <div class="row">
+            <div class="col-md-6 mx-auto p-0">
+                <div class="card">
+                    <div class="login-box">
+                        <div class="login-snip">
+                            <input id="tab-1" type="radio" name="tab" class="sign-in"><a href="/identity/account/login" for="tab-1" class="tab">Login</a> <input id="tab-2" type="radio" name="tab" class="sign-up" checked><label for="tab-2" class="tab">Sign Up</label>
+                            <div class="login-space">
+
+
+
+                                <div class="sign-up-form">
+                                    <div class="group"> <label for="user" class="label">Firstname</label> <input id="user" asp-for="Input.FirstName" type="text" class="input" placeholder="Create your Firstname"> </div>
+                                    <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+                                    <div class="group"> <label for="user" class="label">Lastname</label> <input id="user" asp-for="Input.LastName" type="text" class="input" placeholder="Create your Lastname"> </div>
+                                    <span asp-validation-for="Input.LastName" class="text-danger"></span>
+
+
+
+                                    <div class="group"> <label for="pass" class="label">Email Address</label> <input id="pass" asp-for="Input.Email" type="text" class="input" placeholder="Enter your email address"> </div>
+                                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+
+
+
+                                    <div class="group"> <label for="pass" class="label">Password</label> <input id="pass" asp-for="Input.Password" type="password" class="input" data-type="password" placeholder="Create your password"> </div>
+                                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+
+
+
+                                    <div class="group"> <label for="pass" class="label">Repeat Password</label> <input id="pass" asp-for="Input.ConfirmPassword" type="password" class="input" data-type="password" placeholder="Repeat your password"> </div>
+                                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+
+
+
+                                    <div class="group"> <input type="submit" class="button" value="Register"> </div>
+                                    <div class="hr"></div>
+                                    <div class="foot"> <label for="tab-1"><a href="/identity/account/login">Already Member?</a></label> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+</body>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

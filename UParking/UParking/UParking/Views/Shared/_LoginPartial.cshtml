@@ -1,0 +1,61 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using UParking.Areas.Identity.Data
+
+@inject SignInManager<UParkingUser> SignInManager
+@inject UserManager<UParkingUser> UserManager
+
+
+    @if (SignInManager.IsSignedIn(User))
+    {
+<nav>
+    @*<a asp-action="Vehicle" asp-controller="VehicleMVC">Vehicle</a>
+        <a asp-action="Pass" asp-controller="PassMVC">Pass</a>
+        <a asp-action="Booking" asp-controller="BookingMVC">Booking</a>*@
+
+
+    <a id="manage" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
+
+    @*<a id="logout" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+             Logout
+        </a>*@
+    @* <a id="logout" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            Logout
+        </a>*@
+    <a>
+        <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button id="logout" type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+        </form>
+    </a>
+    <div class="dropdown" style="float:right;">
+        <a class="dropbtn">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div class="dropdown-content">
+            <a asp-action="NewBooking" asp-controller="BookingMVC">Slot Booking<i class="fas fa-bookmark"></i></a>
+            <a asp-action="Addvehicle" asp-controller="VehicleMVC">Vehicle<i class="fas fa-car"></i></a>
+            <a asp-action="AddPass" asp-controller="PassMVC">Pass<i class="fas fa-ticket-alt"></i></a>
+            @*<a href="#">Login<i class="fas fa-sign-in-alt"></i></a>
+                <a href="#">Register<i class="fas fa-plus-square"></i></a>*@
+            <a asp-action="ViewBooking" asp-controller="BookingMVC">User Profile<i class="fas fa-user-circle"></i></a>
+        </div>
+    </div>
+
+
+
+
+</nav>
+
+
+        @*<li><a id="login" href="#">Login</a></li>
+        <li><a id="register" href="#">Register</a></li>*@
+        
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </li>
+    }

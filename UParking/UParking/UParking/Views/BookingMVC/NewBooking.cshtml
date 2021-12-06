@@ -1,0 +1,94 @@
+﻿@model UParking.Models.Booking1
+
+@{
+    ViewData["Title"] = "NewBooking";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form asp-action="NewBooking">
+    <div id="booking" class="bsection">
+        <div class="bsection-center">
+            <div class="bcontainer">
+                <div class="brow">
+                    <div class="bbooking-form">
+                        <div class="bbooking-bg">
+                            <img src="~/lib/Images/booking.png" width="400px" height="500px">
+                        </div>
+                        <div class="bform-group">
+                            <label class="bform-label">Car No</label>
+                            <input type="text" asp-for="CarNo" class="bform-control">
+                        </div>
+                        <div class="bform-group">
+                            <label asp-for="Slotno" class="bform-label">Slot No</label>&nbsp;&nbsp;
+                            <select asp-for="Slotno" class="bform-control">
+                                <option selected disabled>Select Slot</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                            </select>
+                            <br />
+                        </div>
+                        <div class="brow">
+                            <div class="bcol-md-6">
+                                <div class="bform-group">
+                                    <label class="bform-label">Entry Date</label>
+                                    <input asp-for="Startdate" class="bform-control" type="date" required>
+                                </div>
+                            </div>
+                            <div class="bcol-md-6">
+                                <div class="bform-group">
+                                    <label class="bform-label">Exit Date</label>
+                                    <input asp-for="Enddate" class="bform-control" type="date" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="brow">
+                            <div class="bcol-md-6">
+                                <div class="bform-group">
+                                    <label class="bform-label">Entry Time</label>
+                                    <input asp-for="Starttime" class="bform-control" type="time" required>
+                                </div>
+                            </div>
+                            <div class="bcol-md-6">
+                                <div class="bform-group">
+                                    <label class="bform-label">Exit Time</label>
+                                    <input asp-for="Endtime" class="bform-control" type="time" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bform-group">
+                            <label class="bform-label">COST:</label>
+                            <select asp-for="Amount" class="bform-control">
+                                <option value="100" selected>100</option>
+                            </select>
+                        </div>
+
+                        <div class="bform-btn">
+                            <button class="bsubmit-btn" width="100px">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,49 @@
+﻿@model UParking.Models.Vehicle1
+
+@{
+    ViewData["Title"] = "Addvehicle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Addvehicle</h1>
+
+<h4>Vehicle1</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Addvehicle">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" value="@ViewData["UserId"]"/>
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vechname" class="control-label"></label>
+                <input asp-for="Vechname" class="form-control" />
+                <span asp-validation-for="Vechname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vechno" class="control-label"></label>
+                <input asp-for="Vechno" class="form-control" />
+                <span asp-validation-for="Vechno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehcolor" class="control-label"></label>
+                <input asp-for="Vehcolor" class="form-control" />
+                <span asp-validation-for="Vehcolor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

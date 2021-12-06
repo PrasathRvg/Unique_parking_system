@@ -1,0 +1,97 @@
+﻿@model IEnumerable<UParking.Models.Pass1>
+
+@{
+    ViewData["Title"] = "ViewPass";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="content" class="content content-full-width">
+                <div class="profile">
+                    <div class="profile-header">
+                        <div class="profile-header-cover"></div>
+                        <div class="profile-header-content">
+                            <div class="profile-header-img">
+                                <img src="~/lib/Images/MicrosoftTeams-image (4).png" alt="">
+                            </div>
+                            <div class="profile-header-info">
+                            
+                                <h4 class="m-t-10 m-b-5">PRASATH</h4>
+                                    <p class="m-b-10">HAVE A GOOD DAY</p>
+                                <a asp-action="Editprofile" asp-route-id="" class="btn btn-sm btn-info mb-2">Edit Profile</a>
+
+                            </div>
+                        </div>
+                        <ul class="profile-header-tab nav nav-tabs">
+                            <li class="nav-item"><button  onclick="@("window.location.href='" + @Url.Action("Bookconf", "BookingMVC") + "'");" class="nav-link active show" data-toggle="tab">BOOKED SLOTS</button></li>
+                            <li class="nav-item"><button onclick="@("window.location.href='" + @Url.Action("ViewPass", "PassMVC") + "'");" class="nav-link" data-toggle="tab">PASS</button></li>
+
+                        </ul>
+             
+                    </div>
+                </div>
+                @foreach (var item in Model)
+                {
+              
+                <div class="profile-content">
+                   
+                    <div class="tab-content p-0">
+                    
+                        <div class="tab-pane fade active show" id="profile-post">
+                            <ul class="timeline">
+                                <li>
+                                    
+                                    <div class="timeline-time">
+                                       
+                                    </div>
+                                  
+                                    <div class="timeline-icon">
+                                        <a href="javascript:;">&nbsp;</a>
+                                    </div>
+                                   
+                                    <div class="timeline-body">
+                                        <div class="body">
+                                            <div class="cardss">
+                                                <div class="cardss__front cardss__part">
+                                                    <img class="cardss__front-square cardss__square" src="~/lib/Images/logo.png">
+                                                    <img class="cardss__front-logo cardss__logo" src="https://media.istockphoto.com/vectors/car-parking-icon-vector-id1083622428?k=20&m=1083622428&s=612x612&w=0&h=pgKz3ptT-VgQiXZ7cVolMLeXKy9Ma5YKrfeE7SmDLQ8=">
+                                                    <p class="cardss_numer">**** **** **** 6258</p>
+                                                    <div class="cardss__space-75">
+                                                        <span class="cardss__label">cardss holder</span>
+                                                        <p class="cardss__info">Prasath</p>
+                                                    </div>
+                                                    <div class="cardss__space-25">
+                                                        <span class="cardss__label">Expires</span>
+                                                        <p class="cardss__info">30 Days</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="cardss__back cardss__part">
+                                                    <div class="cardss__black-line"></div>
+                                                    <div class="cardss__back-content">
+                                                        <div class="cardss__secret">
+                                                           
+                                                            <img style="width: 80px;height: 80px; margin: 0 40%;" src="~/lib/Images/MicrosoftTeams-image (3).png">
+                                                        </div>
+                                                        <img class="cardss__back-square cardss__square" src="~/lib/Images/logo.png">
+                                                      
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+          
+                }
+        </div>
+    </div>
+</div>

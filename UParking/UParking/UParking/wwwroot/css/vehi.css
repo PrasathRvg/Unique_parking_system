@@ -1,0 +1,293 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.vsection {
+    position: relative;
+    height: 100vh;
+}
+
+    .vsection .vsection-center {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+#booking {
+    font-family: 'Alice', serif;
+    background: white;
+}
+
+.vbooking-form {
+    position: relative;
+    max-width: 912px;
+    width: 100%;
+    margin: auto;
+    background: #fff;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+    .vbooking-form .vbooking-bg {
+        position: absolute;
+        right: 400px;
+        top: -40px;
+        bottom: -25px;
+        width: 700px;
+        /* background-image: url('../img/doodle.png'); */
+        background-size: cover;
+        background-position: center;
+        padding: 25px;
+        border-radius: 6px;
+        -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+        .vbooking-form .vbooking-bg::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            /* background: rgba(255, 255, 255, 0.39); */
+            /* background: #3ecf8e83; */
+        }
+
+    .vbooking-form > form {
+        margin-left: 425px;
+        padding: 30px;
+        background: #f6f9fc;
+    }
+
+    .vbooking-form .vform-header {
+        margin-bottom: 30px;
+        margin-top: 60px;
+        position: relative;
+        z-index: 20;
+    }
+
+        .vbooking-form .vform-header h2 {
+            font-family: 'Playfair Display', serif;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 900;
+            color: #fff;
+            font-size: 42px;
+            text-transform: capitalize;
+        }
+
+        .vbooking-form .vform-header p {
+            color: #fff;
+            font-size: 18px;
+        }
+
+    .vbooking-form .vform-group {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .vbooking-form .vform-control {
+        background-color: #fff;
+        height: 45px;
+        padding: 0px 15px;
+        color: #151515;
+        border: 1px solid #e5e5e5;
+        font-size: 16px;
+        font-weight: 700;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-radius: 50px;
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all;
+        width:100%;
+    }
+
+        .vbooking-form .vform-control::-webkit-input-placeholder {
+            color: #e5e5e5;
+        }
+
+        .vbooking-form .vform-control:-ms-input-placeholder {
+            color: #e5e5e5;
+        }
+
+        .vbooking-form .vform-control::placeholder {
+            color: #e5e5e5;
+        }
+
+        .vbooking-form .vform-control:focus {
+            background: #f8f8f8;
+        }
+
+    .vbooking-form input[type="date"].vform-control:invalid {
+        color: #e5e5e5;
+    }
+
+    .vbooking-form select.vform-control {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+        .vbooking-form select.vform-control:invalid {
+            color: #e5e5e5;
+        }
+
+        .vbooking-form select.vform-control option {
+            color: #151515;
+        }
+
+        .vbooking-form select.vform-control + .select-arrow {
+            position: absolute;
+            right: 3px;
+            bottom: 5px;
+            width: 32px;
+            line-height: 32px;
+            height: 32px;
+            text-align: center;
+            pointer-events: none;
+            color: #e5e5e5;
+            font-size: 14px;
+        }
+
+            .vbooking-form select.vform-control + .select-arrow:after {
+                content: '\279C';
+                display: block;
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+
+    .vbooking-form .vform-label {
+        color: #32325d;
+        text-transform: uppercase;
+        line-height: 24px;
+        height: 24px;
+        font-size: 14px;
+        font-weight: 400;
+        margin-left: 20px;
+        font-weight: bold;
+    }
+
+    .vbooking-form .vform-btn {
+        margin-top: 30px;
+    }
+
+    .vbooking-form .vsubmit-btn {
+        display: block;
+        width: 100%;
+        background-color: #3ecf8e;
+        color: #fff; 
+        font-weight: 700;
+        font-size: 18px;
+        border: 2px solid;
+        border-radius: 40px;
+        height: 55px;
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all;
+    }
+
+        .vbooking-form .vsubmit-btn:hover,
+        .vbooking-form .vsubmit-btn:focus {
+            background-color:transparent;
+            color: #3ecf8e;
+        }
+ 
+
+@media only screen and (max-width: 768px) {
+    .vbooking-form .vbooking-bg {
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: -15px;
+        width: 95%;
+        margin: auto;
+    }
+
+    .vbooking-form > form {
+        margin-left: 0px;
+    }
+}
+
+body {
+    font-family: Varela Round;
+    background: #f1f1f1;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Card Styles */
+.veh-container{
+    width:200%;
+ 
+}
+.veh-card-sl {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+    margin-left: 350px;
+}
+
+.veh-card-image img {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 8px 8px 0px 0;
+}
+
+.veh-card-action {
+    position: relative;
+    float: right;
+    margin-top: -25px;
+    margin-right: 20px;
+    z-index: 2;
+    color: #E26D5C;
+    background: #fff;
+    border-radius: 100%;
+    padding: 15px;
+    font-size: 15px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+}
+
+    .veh-card-action:hover {
+        color: #fff;
+        background: #E26D5C;
+        /* -webkit-animation: pulse 1.5s infinite; */
+    }
+
+.veh-card-heading {
+    font-size: 18px;
+    font-weight: bold;
+    background: #fff;
+    padding: 10px 15px;
+}
+
+.veh-card-text {
+    padding: 10px 15px;
+    background: #fff;
+    font-size: 14px;
+    color: #636262;
+}
+
+.veh-card-button {
+    
+    padding: 10px 113px;
+    width: 100%;
+    background-color: #1F487E;
+    color: #fff;
+    border-radius: 0 0 8px 8px;
+}
+
+    .veh-card-button:hover {
+        text-decoration: none;
+        background-color: #1D3461;
+        color: #fff;
+    }

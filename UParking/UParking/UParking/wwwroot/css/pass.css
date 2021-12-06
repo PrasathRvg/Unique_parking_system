@@ -1,0 +1,242 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.psection{
+    position: relative;
+    height: 100vh;
+}
+
+.psection .psection-center {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#booking {
+    font-family: 'Alice', serif;
+    background: white;
+}
+
+.pbooking-form {
+    position: relative;
+    max-width: 912px;
+    width: 100%;
+    margin: auto;
+    background: #fff;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+    .pbooking-form .pbooking-bg {
+        position: absolute;
+        left: -70px;
+        top: -100px;
+        bottom: -25px;
+        height: 500px;
+        width: 500px;
+        /*background-image: url('../img/MicrosoftTeams-image.png');*/
+        background-size: cover;
+        background-position: center;
+        padding: 25px;
+        border-radius: 6px;
+        -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+        .pbooking-form .pbooking-bg::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
+
+    .pbooking-form > form {
+        margin-left: 425px;
+        padding: 30px;
+        background: #f6f9fc;
+    }
+
+    .pbooking-form .form-header {
+        margin-bottom: 30px;
+        margin-top: 60px;
+        position: relative;
+        z-index: 20;
+    }
+
+        .pbooking-form .form-header h2 {
+            font-family: 'Playfair Display', serif;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 900;
+            color: #fff;
+            font-size: 42px;
+            text-transform: capitalize;
+        }
+
+    .pbooking-form .pform-header p {
+        color: #fff;
+        font-size: 18px;
+    }
+
+    .pbooking-form .pform-group {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .pbooking-form .pform-control {
+        background-color: #fff;
+        height: 45px;
+        padding: 0px 15px;
+        color: #797777;
+        border: 1px solid #e5e5e5;
+        font-size: 16px;
+        font-weight: 700;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-radius: 40px;
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all;
+        border-color: #3ecf8e;
+    }
+
+        .pbooking-form .pform-control::-webkit-input-placeholder {
+            color: #3f3e3e;
+        }
+
+        .pbooking-form .pform-control:-ms-input-placeholder {
+            color: #3f3e3e;
+        }
+
+        .pbooking-form .pform-control::placeholder {
+            color: #797777;
+        }
+
+        .pbooking-form .pform-control:focus {
+            background: #f8f8f8;
+        }
+
+    .pbooking-form input[type="date"].pform-control:invalid {
+        color: #797777;
+        border-color: #3ecf8e;
+    }
+
+    .pbooking-form select.pform-control {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-color: #3ecf8e;
+    }
+
+        .pbooking-form select.pform-control:invalid {
+            color: #797777;
+        }
+
+        .pbooking-form select.pform-control option {
+            color: #797777;
+        }
+
+        .pbooking-form select.pform-control + .pselect-arrow {
+            position: absolute;
+            right: 3px;
+            bottom: 5px;
+            width: 32px;
+            line-height: 32px;
+            height: 32px;
+            text-align: center;
+            pointer-events: none;
+            color: #e5e5e5;
+            font-size: 14px;
+        }
+
+            .pbooking-form select.pform-control + .pselect-arrow:after {
+                content: '\279C';
+                display: block;
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+
+    .pbooking-form .pform-label {
+        color: #32325d;
+        text-transform: uppercase;
+        line-height: 24px;
+        height: 24px;
+        font-size: 14px;
+        font-weight: 1000;
+        margin-left: 20px;
+    }
+
+    .pbooking-form .pform-btn {
+        margin-top: 30px;
+    }
+
+    .pbooking-form .psubmit-btn {
+        display: block;
+        margin-left: 70px;
+        width: 70%;
+        color: #3ecf8e;
+        letter-spacing: 1px;
+        background-color: transparent;
+        font-weight: 700;
+        font-size: 16px;
+        border: 2px solid;
+        border-radius: 40px;
+        height: 55px;
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all;
+    }
+
+        .pbooking-form .psubmit-btn:hover,
+        .pbooking-form .psubmit-btn:focus {
+            background-color: #3ecf8e;
+            color: #fff;
+        }
+
+.pbutton_slide {
+    color: #3ecf8e;
+    border: 2px solid #3ecf8e;
+    border-radius: 0;
+    padding: 8px 10px;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #3ecf8e;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+.pslide_down:hover {
+    box-shadow: inset 0 100px 0 0 #3ecf8e;
+    color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .pbooking-form .pbooking-bg {
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: -15px;
+        width: 95%;
+        margin: auto;
+    }
+
+    .pbooking-form > form {
+        margin-left: 0px;
+    }
+}
+
+
+

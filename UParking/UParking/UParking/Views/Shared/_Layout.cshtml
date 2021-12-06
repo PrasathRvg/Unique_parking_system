@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - UParking</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/Home.css" />
+    <link href="~/css/payment.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="~/css/book.css" rel="stylesheet" />
+    <link href="~/css/vehi.css" rel="stylesheet" />
+    <link href="~/css/pass.css" rel="stylesheet" />
+    <link href="~/css/user.css" rel="stylesheet" />
+    <link href="~/css/passcard.css" rel="stylesheet" />
+</head>                                                                                                                                                                                                                                                                                                                                                                                    
+<body>
+    @*<header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">UParking</a>
+                </div>
+            </nav>
+        </header>*@
+
+    <header class="header-fixed">
+        <div class="header-limiter">
+
+            <!-- <i id="logo" class="fas fa-parking"></i> -->
+            <h1><a href="#"><img id="logo" src="~/lib/Images/logo.png"></a></h1>
+            <nav>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+
+                    <partial name="_LoginPartial.cshtml" />
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    @* <div class="container">
+        <main role="main" class="pb-3">*@
+    @RenderBody()
+
+
+
+
+    <footer class="footer">
+        <div class="footer1">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">The team</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Languages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">contact us</a></li>
+                        <li><a href="#">Send Feedback</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">For Operators</a></li>
+                        <li><a href="#">For Governments</a></li>
+                        <li><a href="#">For Coporates</a></li>
+                        <li><a href="#">For Auto OEMs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

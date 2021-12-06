@@ -1,0 +1,99 @@
+﻿@model UParking.Models.Pass1
+@{
+    ViewData["Title"] = "AddPassAsync";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="booking" class="psection">
+    <div class="psection-center">
+        <div class="pcontainer">
+            <div class="prow">
+                <div class="pbooking-form">
+                    <div class="pbooking-bg">
+                        <img src="~/lib/Images/MicrosoftTeams-image.png">
+                    </div>
+                    <form asp-action="AddPass">
+                        <div class="prow">
+                            <div class="pcol-md-6">
+                                <div class="pform-group">
+                                    <label asp-for="Startdate" class="pform-label">Start Date</label>
+                                    <input asp-for="Startdate" class="pform-control" type="date" required>
+                                </div>
+                                <span asp-validation-for="Startdate" class="text-danger"></span>
+                            </div>
+                            <div class="pcol-md-6">
+                                <div class="pform-group">
+                                    <label asp-for="BookingDate" class="pform-label">Booking Date</label>
+                                    <input asp-for="BookingDate" class="pform-control" type="date" required>
+                                    <span asp-validation-for="BookingDate" class="text-danger"></span>
+                                </div>
+                                <span asp-validation-for="BookingDate" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="prow">
+                            <div class="pcol-md-6">
+                                <div class="pform-group">
+                                    <label asp-for="PassType" class="pform-label">Pass Type</label>
+                                    <select asp-for="PassType" class="pform-control">
+                                        <option value ="Monthly">Monthly</option>
+                                     </select>
+                                </div>
+                                <span asp-validation-for="PassType" class="text-danger"></span>
+                            </div>
+
+                            <div class="pcol-md-6">
+                                <div class="pform-group">
+                                    <label asp-for="Vechid" class="pform-label">Vehicle Id</label>
+                                    <input asp-for="Vechid" class="pform-control" type="number" required>
+                                </div>
+                                <span asp-validation-for="Vechid" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="pform-group">
+                            <label class="pform-label">COST:</label>
+                            <select asp-for="Cost" class="pform-control">
+                                <option value="500" selected>500</option>
+                            </select>
+                        </div>
+                        
+                        <div class="pform-group">
+                            <label asp-for="Slotno" class="pform-label">Slot No</label>&nbsp;&nbsp;
+                            <select asp-for="Slotno" class="pform-control">
+                                <option selected disabled>Select Slot</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                            </select>
+                            <span asp-validation-for="Slotno" class="text-danger"></span>
+                            <br />
+                        </div>
+                        <div class="pform-btn">
+                            <button class="psubmit-btn">Book My Pass</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,84 @@
+﻿@model IEnumerable<UParking.Models.Booking1>
+
+@{
+    ViewData["Title"] = "ViewBooking";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="bfrow">
+        <div class="col-md-12">
+            <div id="content" class="content content-full-width">
+                <div class="profile">
+                    <div class="profile-header">
+
+                        <div class="profile-header-cover"></div>
+
+                        <div class="profile-header-content">
+
+                            <div class="profile-header-img">
+                                <img src="~/lib/Images/MicrosoftTeams-image (4).png" alt="">
+                            </div>
+
+                            <div class="profile-header-info">
+                                <h4 class="m-t-10 m-b-5">PRASATH</h4>
+                                <p class="m-b-10">HAVE A GOOD DAY</p>
+                                <a asp-action="Editprofile" class="btn btn-sm btn-info mb-2">Edit Profile</a>
+
+                            </div>
+
+                        </div>
+
+                        <ul class="profile-header-tab nav nav-tabs">
+                            <li class="nav-item"><button onclick="@("window.location.href='" + @Url.Action("Bookconf", "BookingMVC") + "'");" class="nav-link active show" data-toggle="tab">BOOKED SLOTS</button></li>
+
+                            <li class="nav-item"><button onclick="@("window.location.href='" + @Url.Action("ViewPass", "PassMVC") + "'");" class="nav-link" data-toggle="tab">PASS</button></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                @foreach (var item in Model)
+                {
+                    <div class="profile-content">
+
+                        <div class="tab-content p-0">
+
+                            <div class="tab-pane fade active show" id="profile-post">
+                                <ul class="timeline">
+                                    <li>
+
+                                        <div class="timeline-time">
+
+                                        </div>
+
+                                        <div class="timeline-icon">
+                                            <a href="javascript:;">&nbsp;</a>
+                                        </div>
+
+                                        <div class="timeline-body">
+                                            <article class="card fl-left">
+                                                <section class="tkt-date">
+                                                    <time datetime="23th feb">
+                                                        <span>@Html.DisplayFor(modelItem => item.Slotno)</span><span>Slot No</span>
+                                                    </time>
+                                                </section>
+                                                <section class="card-cont">
+                                                    <h2>Name: Prasath</h2>
+                                                    <h2>Vehicle Number:@Html.DisplayFor(modelItem => item.CarNo)</h2>
+
+                                                    <h2>@Html.DisplayFor(modelItem => item.Startdate) - @Html.DisplayFor(modelItem => item.Enddate)</h2>
+                                                </section>
+                                            </article>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,116 @@
+﻿@model UParking.Models.Payment1
+
+@{
+    ViewData["Title"] = "NewPayment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="paypal-card">
+    <div class="container">
+        <div class="card-title">
+            <h2>PAYMENT</h2>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="payment-type">
+                    <h4 class="payh4">Choose payment method below</h4>
+                    <div class="pay-types">
+                        <button class="ptype" asp-action="NewPayment" asp-area="" asp-controller="PaymentMVC">
+                            <div class="logo">
+                                <i class='bx bx-credit-card bx-md'></i>
+                            </div>
+                            <div class="text">
+                                <p>Pay with Credit Card / Debit Card</p>
+                            </div>
+                        </button>
+                        <button class="ptype" asp-action="UpiPayment" asp-area="" asp-controller="PaymentMVC">
+                            <div class="logo">
+                                <i class='bx bx-mobile-alt bx-md'></i>
+                            </div>
+                            <div class="text">
+                                <p>Pay with UPI</p>
+                            </div>
+                        </button>
+                        <button class="ptype" asp-action="NetbankingPayment" asp-area="" asp-controller="PaymentMVC">
+                            <div class="logo">
+                                <i class='bx bxs-bank bx-md'></i>
+                            </div>
+                            <div class="text">
+                                <p>Pay with Net Banking</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <section id="creditcard">
+                <div class="payment-info">
+                    <div class="column">
+                        <div class="title">
+                            <h4 class="cardhead">CARD INFO</h4>
+                        </div>
+                        <form asp-action="NewPayment">
+                            <div class="field-full">
+                                <label asp-for="Choldername">Cardholder Name</label>
+                                <input asp-for="Choldername" type="text" placeholder="Full Name" class="payinput">
+                                <span asp-validation-for="Choldername" class="text-danger"></span>
+                            </div>
+                            <div class="field-full">
+                                <label asp-for="Cardnumber">Card Number</label>
+                                <input asp-for="Cardnumber" type="number" placeholder="xxxx-xxxx-xxxx-xxxx" class="payinput">
+                                <span asp-validation-for="Cardnumber" class="text-danger"></span>
+
+
+                            </div>
+                            <div class="mmyyyy">
+                                <div class="field-half">
+                                    <label asp-for="ExpMonth">Exp. Month</label>
+                                    <input asp-for="ExpMonth" type="number" placeholder="mm" class="payinput">
+                                    <span asp-validation-for="ExpMonth" class="text-danger"></span>
+                                </div>
+                                <div class="field-half">
+                                    <label asp-for="ExpYear">Exp. Year</label>
+                                    <input asp-for="ExpYear" type="number" placeholder="yy" class="payinput">
+                                    <span asp-validation-for="ExpYear" class="text-danger"></span>
+                                </div>
+                            </div><br>
+                                  <div class="field-full">
+                                      <label for="zip">CVC Number</label>
+                                      <input type="number" placeholder="xxx" class="payinput" required/>
+                                  </div>
+                            <div class="field-full">
+                                <label for="amt">Amount</label>
+                                <div class="amtdisp">
+                                   @* <b>@ViewData["BookAmount"] </b>*@
+                                </div>
+                            </div>
+                            <div class="paymentbtn">
+                                <button class="pay-btn">Cancel</button>
+                                <input type="submit" value="Pay" class="pay-btn" data-toggle="modal" data-target="#myModal" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+@*<div id="myModal" class="modal fade">
+    <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="material-icons">&#xE876;</i>
+                </div>
+                <h4 class="modal-title w-100">Awesome!</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-center">Your booking has been confirmed.</p>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

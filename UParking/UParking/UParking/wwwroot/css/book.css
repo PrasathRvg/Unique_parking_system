@@ -1,0 +1,246 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bsection {
+    position: relative;
+    height: 100vh;
+}
+
+    .bsection .bsection-center {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+
+
+#bbooking {
+    font-family: 'Alice', serif;
+    background: white;
+}
+
+.bbooking-form {
+    position: relative;
+    max-width: 912px;
+    width: 100%;
+    margin: auto;
+    height:550px;
+    background: #fff;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+    .bbooking-form .bbooking-bg {
+        position: absolute;
+        left: 25px;
+        top: -25px;
+        bottom: -25px;
+        width: 500px;
+        /*background-image: url('../img/pk.png');*/
+        background-size: cover;
+        background-position: center;
+        padding: 25px;
+        border-radius: 6px;
+        -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+        .bbooking-form .bbooking-bg::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: transparent;
+        }
+
+    .bbooking-form > form {
+        margin-left: 425px;
+        padding: 30px;
+        background: #f6f9fc;
+    }
+
+    .bbooking-form .bform-header {
+        margin-bottom: 30px;
+        margin-top: 60px;
+        position: relative;
+        z-index: 20;
+    }
+
+        .bbooking-form .bform-header h2 {
+            font-family: 'Playfair Display', serif;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 900;
+            color: #32325d;
+            font-size: 42px;
+            text-transform: capitalize;
+        }
+
+        .bbooking-form .bform-header p {
+            color: #3ecf8e;
+            font-size: 18px;
+        }
+
+    .bbooking-form .bform-group {
+        position: relative;
+        margin-bottom: 20px;
+        top:25px;
+        left:50%;
+    }
+
+    .bbooking-form .bform-control {
+        background-color: #fff;
+        height: 45px;
+        padding: 0px 15px;
+        color: #151515;
+        border: 2px solid #3ecf8e;
+        font-size: 16px;
+        font-weight: 700;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-radius: 40px;
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all;
+        margin-left:50px
+    }
+
+        .bbooking-form .bform-control::-webkit-input-placeholder {
+            color: #e5e5e5;
+        }
+
+        .bbooking-form .bform-control:-ms-input-placeholder {
+            color: #e5e5e5;
+        }
+
+        .bbooking-form .bform-control::placeholder {
+            color: #fff;
+        }
+
+        .bbooking-form .bform-control:focus {
+            background: #fff;
+        }
+
+    .bbooking-form input[type="date"].bform-control:invalid {
+        color: #6b7c93;
+    }
+
+    .bbooking-form input[type="time"].bform-control:invalid {
+        color: grey;
+    }
+
+    .bbooking-form select.bform-control {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+        .bbooking-form select.bform-control:invalid {
+            color: #e5e5e5;
+        }
+
+        .bbooking-form select.bform-control option {
+            color: #151515;
+        }
+
+        .bbooking-form select.bform-control + .select-arrow {
+            position: absolute;
+            right: 3px;
+            bottom: 5px;
+            width: 32px;
+            line-height: 32px;
+            height: 32px;
+            text-align: center;
+            pointer-events: none;
+            color: #e5e5e5;
+            font-size: 14px;
+        }
+
+            .bbooking-form select.bform-control + .select-arrow:after {
+                content: '\279C';
+                display: block;
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+
+    .bbooking-form .bform-label {
+        color: #32325d;
+        text-transform: uppercase;
+        line-height: 24px;
+        height: 24px;
+        font-size: 14px;
+        font-weight: 800;
+        margin-left: 20px;
+    }
+
+    .bbooking-form .bform-btn {
+        margin-top: 30px;
+    }
+
+    .bbooking-form .bsubmit-btn {
+        display: block;
+        width: 50%;
+        color: #3ecf8e;
+        background-color: transparent;
+        font-weight: 700;
+        font-size: 18px;
+        border: 2px solid;
+        border-radius: 40px;
+        margin-left:50%;
+        height: 55px;
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all;
+    }
+
+
+        .bbooking-form .bsubmit-btn:hover,
+        .bbooking-form .bsubmit-btn:focus {
+            background-color: #3ecf8e;
+            color: #fff;
+        }
+
+.bbutton_slot {
+    color: #3ecf8e;
+    border: 2px solid #3ecf8e;
+    border-radius: 0;
+    padding: 8px 10px;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #3ecf8e;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+.bslide_down:hover {
+    box-shadow: inset 0 100px 0 0 #3ecf8e;
+    color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .bbooking-form .bbooking-bg {
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: -15px;
+        width: 95%;
+        margin: auto;
+    }
+
+    .bbooking-form > form {
+        margin-left: 0px;
+    }
+}

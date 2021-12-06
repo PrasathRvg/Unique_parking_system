@@ -1,0 +1,97 @@
+﻿@model UParking.Models.Payment1
+
+@{
+    ViewData["Title"] = "UpiPayment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="paypal-card">
+    <div class="container">
+        <div class="card-title">
+            <h2>PAYMENT</h2>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="payment-type">
+                    <h4 class="payh4">Choose payment method below</h4>
+                    <div class="pay-types">
+                        <button class="ptype" asp-action="NewPayment" asp-area="" asp-controller="PaymentMVC">
+                            <div class="logo">
+                                <i class='bx bx-credit-card bx-md'></i>
+                            </div>
+                            <div class="text">
+                                <p>Pay with Credit Card / Debit Card</p>
+                            </div>
+                        </button>
+                        <button class="ptype" asp-action="UpiPayment" asp-area="" asp-controller="PaymentMVC">
+                            <div class="logo">
+                                <i class='bx bx-mobile-alt bx-md'></i>
+                            </div>
+                            <div class="text">
+                                <p>Pay with UPI</p>
+                            </div>
+                        </button>
+                        <button class="ptype" asp-action="NetbankingPayment" asp-area="" asp-controller="PaymentMVC">
+                            <div class="logo">
+                                <i class='bx bxs-bank bx-md'></i>
+                            </div>
+                            <div class="text">
+                                <p>Pay with Net Banking</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <section id="creditcard">
+                <div class="payment-info">
+                    <div class="column">
+                        <div class="title">
+                            <h4 class="cardhead">UPI/BHIM</h4>
+                        </div>
+                        <form asp-action="UpiPayment">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <label asp-for="UpiApp" class="upilabel">Select your UPI app</label>
+                            <select asp-for="UpiApp" class="payopt">
+                                <option>Please Select</option>
+                                <option value="Gpay"></i>GPay</option>
+                                <option value="Paytm">Paytm</option>
+                                <option value="PhonePe">Phonepe</option>
+                                <option value="Bhim">BHIM</option>
+                            </select>
+                            <span asp-validation-for="UpiApp" class="text-danger"></span>
+                            <div class="field-full">
+                                <label asp-for="UpiId">Enter your UPI ID</label>
+                                <input asp-for="UpiId" id="name" type="text" class="payinput">
+                            </div>
+                            <div class="field-full">
+                                <label for="amt">Amount</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Pay" class="paypal-btn" data-toggle="modal" data-target="#myModal" />
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+@*<div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="icon-box">
+                        <i class="material-icons">&#xE876;</i>
+                    </div>
+                    <h4 class="modal-title w-100">Awesome!</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Your booking has been confirmed.</p>
+                </div>
+            </div>
+        </div>
+    </div>*@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

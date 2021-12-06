@@ -1,0 +1,79 @@
+﻿@model UParking.Models.Vehicle1
+
+    @{
+        ViewData["Title"] = "Edit";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <div id="booking" class="vsection">
+        <div class="vsection-center">
+            <div class="vcontainer">
+                <div class="vrow">
+                    <div class="vbooking-form">
+
+                        <div class="vbooking-bg">
+                            <img src="/lib/Images/vehdet.jpg" width="500px" style="position:absolute;top:60px;right:0px;bottom:0px;left:130px">
+
+                            <div class="vform-header">
+                            </div>
+                        </div>
+
+
+                        <form asp-action="EditVehicle">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="vrow">
+
+
+                                <div class="vcol-md-6">
+                                    <div class="vform-group">
+                                        <label asp-for="Vechid" class="vform-label"></label>
+                                        <input asp-for="Vechid" class="vform-control" />
+                                        <span asp-validation-for="Vechid" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="vcol-md-6">
+                                    <div class="vform-group">
+                                        <label asp-for="Vechname" class="vform-label"></label>
+                                        <input asp-for="Vechname" class="vform-control" />
+                                        <span asp-validation-for="Vechname" class="text-danger"></span>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="vrow">
+
+                                <div class="vcol-md-6">
+                                    <div class="vform-group">
+                                        <label asp-for="Vechno" class="vform-label"></label>
+                                        <input asp-for="Vechno" class="vform-control" />
+                                        <span asp-validation-for="Vechno" class="text-danger"></span>
+
+                                    </div>
+                                </div>
+                                <div class="vcol-md-6">
+                                    <div class="vform-group">
+                                        <label asp-for="Vehcolor" class="vform-label"></label>
+                                        <input asp-for="Vehcolor" class="vform-control" />
+                                        <span asp-validation-for="Vehcolor" class="text-danger"></span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="vform-btn">
+
+                                <button class="vsubmit-btn">UPDATE VEHICLE</button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

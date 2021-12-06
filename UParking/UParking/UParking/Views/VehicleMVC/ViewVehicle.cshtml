@@ -1,0 +1,33 @@
+﻿@model IEnumerable<UParking.Models.Vehicle1>
+    <link href="~/css/vehi.css" rel="stylesheet" />
+    @{
+        ViewData["Title"] = "ViewVehicle";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+
+    @foreach (var item in Model)
+    {
+        <div class="veh-container" style="margin-top:50px;">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="veh-card-sl">
+                        <div class="veh-card-image">
+                            <img src="~/lib/Images/audi.jpeg" />
+                        </div>
+                        <div class="veh-card-heading">
+                            @Html.DisplayFor(modelItem => item.Vechname)
+                        </div>
+                        <div class="veh-card-text">
+                            @Html.DisplayFor(modelItem => item.Vechno)
+                        </div>
+                        <div class="veh-card-text">
+                            @Html.DisplayFor(modelItem => item.Vehcolor)
+                        </div>
+                        <a asp-controller="VehicleMVC" asp-action="EditVehicle" asp-route-id="@item.Vechid" class="veh-card-button"> Edit</a>
+                        <a asp-controller="VehicleMVC" asp-action="DeleteVehicle" asp-route-id="@item.Vechid" class="veh-card-button"> Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
