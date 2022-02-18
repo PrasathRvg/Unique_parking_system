@@ -1,0 +1,100 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color:#7d7d7d6e;
+}
+.view-bg-dt .box-dt{
+    
+	border-radius: 15px;
+	overflow: hidden;
+	margin: 5em auto;
+    margin-top:50px;
+	height: 650px;
+	width: 800px;
+    box-shadow: 0 15px 30px 1px grey;
+	background: rgba(255, 255, 255, 0.90);
+
+  }
+
+  .view-bg-dt .box-dt h3{
+      display:block;
+	font-size: 30px;
+	color: #344055;
+    margin:3% 0 3% 3%;
+
+  }
+
+  .view-bg-dt .box-dt h4{
+      display:block;
+    font-size:18px;
+    font-weight:600;
+    max-width:70%;
+    color: #7d7d7d;
+  }
+
+  .view-bg-dt .box-dt p{
+      display: inline-block;
+    font-size:15px;
+    font-weight:500;
+    width:40%;
+    color: #7d7d7d;
+}
+
+.view-bg-dt .box-dt .name h4,p{
+    margin:0 0 0 5%;
+}
+
+ .view-bg-dt .box-dt .place h4,p{
+    margin:0 0 0 5%;
+}
+
+.view-bg-dt .box-dt .name,.place{
+    width:30%;
+    margin:0 0 3% 3%;
+}
+
+.view-bg-dt .box-dt .sqft h4,p{
+    margin:0 0 0 5%;
+}
+
+ .view-bg-dt .box-dt .days h4,p{
+    margin:0 0 0 5%;
+}
+
+.view-bg-dt .box-dt .sqft,.days{
+    width:30%;
+    margin:0 0 3% 3%;
+}
+.view-bg-dt .box-dt .details .d1{
+    display:flex;
+}
+.view-bg-dt .box-dt .details .d2{
+    display:flex;
+}
+
+.view-bg-dt .box-dt .details .cost{
+    display:inline-block;
+    font-size:20px;
+    font-weight:700;
+    color: #213753;
+    background:rgb(173 221 238);
+    border-radius:25px;
+    padding:8px;
+    margin:0 0 5% 19%;
+}
+
+
+.view-bg-dt .box-dt .gif img{
+    display:flex;
+    flex-direction:column;
+    width:60%;
+    height:auto;
+    /* overflow: hidden; */
+    position:relative;
+    bottom:405px;
+    left:400px;
+}
+
+
+  

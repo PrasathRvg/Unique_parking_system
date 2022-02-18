@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+	<body>
+		<div class="form-bg">
+			<div class="box">
+				<div class="image-cl">
+					<img src="images/cleaner-boy.png" id="c-boy"alt="cleaner img">
+				</div>
+				<div class="image-cl">
+					<img src="images/cleaning quips.png" id="cleanimg" alt="cleaner img">
+				</div>
+				<form action="" class="form">
+					<h3>Book a Schedule</h3>
+                    <h6>Contact details</h6>
+					<div class="f-row">
+						<input type="text" class="f-ibox" placeholder="Fullname">
+						<input type="number" class="f-ibox" placeholder="PhoneNo.">
+					</div>
+                    <div class="f-row">
+						<input type="text" class="f-ibox" placeholder="Street Address">
+						<input type="textarea" id="city" class="f-ibox" placeholder="City">
+					</div>
+					<div class="f-row">
+						<div class="f-msg">
+					    <textarea name="" id="msg" placeholder="Message" class="f-ibox"></textarea>
+						</div>
+					</div>
+                    <h6>About your home</h6>
+                    <div class="f-row" id="roomstop">
+						<img class="rooms" src="images/livingroom.jpg" alt="cleaner img">
+                        <img class="rooms" src="images/kitchen.jpg" alt="cleaner img">
+					</div>
+					
+                    <div class="f-row">
+						<div class="quantity">
+                            <a class="sub-btn" >
+								<i class="fa fa-minus"></i>
+							</a>
+                            <input type="text" name="name" value="1">
+                            <a class="add-btn" >
+								<i class="fa fa-plus"></i>
+							</a>
+                        </div>
+                        <div class="quantity">
+                            <a class="sub-btn" >
+								<i class="fa fa-minus"></i>
+							</a>
+                            <input type="text" name="name" value="1">
+                            <a class="add-btn" >
+								<i class="fa fa-plus"></i>
+							</a>
+                        </div>
+					</div>
+					<div class="f-row-sqft">
+						<h4>Sqft</h4>
+						<h4>Sqft</h4>
+					</div>
+                    <!-- <div class="f-row">
+						<input type="number" class="f-ibox-sqft" placeholder="Livingroom Sqft">
+						<input type="number" class="f-ibox-sqft" placeholder="Kitchen Sqft">
+					</div> -->
+					
+                    <div class="f-row" id="roomsbottom">
+						<img class="rooms" src="images/bedroom.jpg" alt="cleaner img">
+                        <img class="rooms" id="bathroom" src="images/bathroom.jpg" alt="cleaner img">
+					</div>
+					
+                    <div class="f-row" >
+						<div class="quantity">
+							<a class="sub-btn" >
+								<i class="fa fa-minus"></i>
+							</a>
+                            <input type="text" name="name" value="1">
+                            <a class="add-btn" >
+								<i class="fa fa-plus"></i>
+							</a>
+                        </div>
+                        <div class="quantity">
+                            <a class="sub-btn" >
+								<i class="fa fa-minus"></i>
+							</a>
+                            <input type="text" name="name" value="1">
+                            <a class="add-btn" >
+								<i class="fa fa-plus"></i>
+							</a>
+                        </div>
+					</div>
+					<div class="f-row-sqft">
+						<h4>Sqft</h4>
+						<h4>Sqft</h4>
+					</div>
+                    <!-- <div class="f-row">
+						<input type="number" class="f-ibox-sqft" placeholder="Bedroom Sqft">
+						<input type="number" class="f-ibox-sqft" placeholder="Bathroom Sqft">
+					</div> -->
+					<div class="f-row">
+						<!-- <label for="cars" class="labl">Preffered Days:</label> -->
+						<select  class="f-ibox" id="days">
+						<option disabled selected>Preffered Days</option>
+						<option value="Daily">Daily</option>
+						<option value="Weekdays">Weekdays</option>
+						<option value="Weekends">Weekends</option>
+						</select>
+				    	<label for="cars" id="cost" class="labl">Total Cost</label>
+						<input type="textarea" class="f-ibox-cost" placeholder="0">
+					</div>
+					<div class="sbtn">
+						<button class="submit">Submit <i class="fa fa-check-square-o"></i> </button>
+					<button class="save">Save <i class="fa fa-save"></i></button>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
